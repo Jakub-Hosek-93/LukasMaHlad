@@ -2,6 +2,7 @@
 import Link from "next/link";
 import BlurText from "./components/BlurText";
 import AnimatedContent from './components/AnimatedContent'
+import { Icon } from '@iconify/react';
 
 const handleAnimationComplete = () => {
   console.log('Animation completed!');
@@ -10,26 +11,26 @@ const handleAnimationComplete = () => {
 
 export default function Home() {
   return (
-      <main className="relative min-h-screen font-[inter] bg-white">
+      <main className="min-h-screen font-[inter] bg-white">
 
         <nav className={"bg-amber-300 fixed max-w-full z-20 h-20 shadow-md container mx-auto flex items-center justify-between py-4 px-6"}>
-            <div className={"text-2xl font-black text-[#563119]"}>LUKÁŠ MÁ HLAD</div>
+            <div><Link href={"#"}><img src={"/logo.png"} width={"180"} alt={"logo"} /></Link></div>
             <div className={"space-x-6 font-black text-[#563119]"}>
               <Link href="#" className={"hover:text-white transition-colors duration-300"}>DOMŮ</Link>
-              <Link href="#" className={"hover:text-white transition-colors duration-300"}>O NÁS</Link>
+              <Link href="#about" className={"hover:text-white transition-colors duration-300"}>O NÁS</Link>
               <Link href="#" className={"hover:text-white transition-colors duration-300"}>PŘISPĚT</Link>
               <Link href="#" className={"hover:text-white transition-colors duration-300"}>KONTAKT</Link>
             </div>
         </nav>
 
-        <section className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center bg-white overflow-hidden">
+        <section className="z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center bg-white overflow-hidden">
           <BlurText
               text="NENECHTE LUKÁŠE TRPĚT HLADEM!"
               delay={180}
               animateBy="words"
               direction="bottom"
               onAnimationComplete={handleAnimationComplete}
-              className="text-5xl md:text-7xl lg:text-7xl font-black text-[#563119] leading-[1.3]"
+              className="text-5xl md:text-7xl lg:text-7xl font-black text-[#563119] leading-[1.3] z-10"
           />
 
           <BlurText
@@ -38,53 +39,71 @@ export default function Home() {
               animateBy="words"
               direction="bottom"
               onAnimationComplete={handleAnimationComplete}
-              className="flex mt-5 text-lg md:text-2xl text-black max-w-4xl leading-relaxed justify-center"
+              className="flex mt-5 text-lg md:text-xl text-gray-600 font-bold max-w-4xl leading-relaxed justify-center z-10"
           />
 
-          <div className="mt-20 flex flex-col sm:flex-row items-center justify-center gap-5 w-full font-bold">
-            <AnimatedContent
-                distance={100}
-                direction="vertical"
-                reverse={false}
-                duration={0.8}
-                ease="power3.out"
-                initialOpacity={0}
-                animateOpacity
-                scale={1}
-                threshold={0.1}
-                delay={1}
-            >
-              <Link href="#" className="w-full sm:w-auto">
-                <button className="bg-amber-300 p-4 rounded-md text-black text-xm">
-                  Přispět na bagetu
-                </button>
-              </Link>
-            </AnimatedContent>
+            <div className="mt-20 flex flex-col sm:flex-row items-center justify-center gap-5 h-auto font-bold z-10">
+                <AnimatedContent
+                    distance={100}
+                    direction="vertical"
+                    duration={0.8}
+                    ease="power3.out"
+                    initialOpacity={0}
+                    animateOpacity
+                    threshold={0.1}
+                    delay={1}
+                >
+                    <Link href="#" className="bg-amber-300 text-[#563119] font-bold text-xl px-6 py-4 rounded-lg hover:bg-[#563119] hover:text-white transition duration-300 shadow-md">
+                        Přispět na bagetu
+                    </Link>
+                </AnimatedContent>
 
-            <AnimatedContent
-                distance={100}
-                direction="vertical"
-                reverse={false}
-                duration={0.8}
-                ease="power3.out"
-                initialOpacity={0}
-                animateOpacity
-                scale={1}
-                threshold={0.1}
-                delay={1}
-            >
-              <Link href="#" className="w-full sm:w-auto">
-                <button className=" p-4 rounded-md text-black text-xm">
-                  Zjistit více
-                </button>
-              </Link>
-            </AnimatedContent>
-          </div>
+                <AnimatedContent
+                    distance={100}
+                    direction="vertical"
+                    duration={0.8}
+                    ease="power3.out"
+                    initialOpacity={0}
+                    animateOpacity
+                    threshold={0.1}
+                    delay={1}
+                >
+                    <Link href="#about" className="text-[#563119] font-bold text-xl px-6 py-4 rounded-lg hover:bg-amber-300 hover:text-[#563119] transition duration-300">
+                        Zjistit více
+                    </Link>
+                </AnimatedContent>
+
+            </div>
         </section>
 
-        <section className={"min-h-screen font-[inter] items-center bg-black"}>
-          <h1 className={"flex text-5xl md:text-7xl lg:text-7xl justify-center items-center font-black text-white leading-[1.3]"}>Kdo jsme?</h1>
+        <section className={"min-h-screen font-[inter] items-center rounded-lg bg-white pt-20"} id={"about"}>
+          <h1 className={"flex text-5xl md:text-7xl lg:text-7xl justify-center items-center font-black text-black leading-[1.3]"}>Kdo jsme?</h1>
+              <div className={"flex flex-col items-center justify-center gap-20 w-full font-bold z-10 text-gray-600 leading-[1.4] mt-20"}>
+                  <p className="text-lg md:text-xl max-w-5xl text-center">
+                      Jmenuju se Lukáš a jsem reprezentant v plavání. Většinu času trávím v bazénu, kde se snažím posouvat svoje limity,
+                      zlepšovat časy a reprezentovat na závodech. Tréninky jsou dlouhé a náročné – často několik hodin denně,
+                      stovky odplavaných bazénů a nekonečné série. K tomu ale patří jedna věc, která nikdy nekončí: hlad.
+
+                      Po tréninku mizí jídlo skoro stejně rychle jako voda za startovním blokem. A protože plavání není zrovna
+                      nejlevnější sport a energie je potřeba pořád doplňovat, vznikl tenhle malý nápad. Pokud chceš podpořit
+                      reprezentanta na jeho cestě za lepšími výsledky a zároveň pomoct doplnit energii po náročném tréninku,
+                      můžeš symbolicky přispět třeba na bagetu.
+
+                      Každá bageta = víc energie na další kilometry v bazénu.
+                  </p>
+
+                  <div className={"flex flex-col items-center justify-center gap-3 w-full font-bold z-10"}>
+                      <img src={"/LukasVeselyFoto.jpg"} width={"800"} className={"rounded-3xl shadow-md"} alt={"Lukas"}/>
+                      <p className={"text-gray-400"} >Lukáš Veselý</p>
+                  </div>
+
+
+              </div>
         </section>
+
+          <section>
+
+          </section>
       </main>
 
 
