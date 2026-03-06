@@ -77,33 +77,18 @@ export default function Home() {
         </section>
 
         <section className={"min-h-screen font-[inter] items-center rounded-lg bg-white pt-20"} id={"about"}>
-          <h1 className={"flex text-5xl md:text-7xl lg:text-7xl justify-center items-center font-black text-black leading-[1.3]"}>Kdo jsme?</h1>
+          <h1 className={"flex text-5xl md:text-7xl lg:text-7xl justify-center items-center font-black text-black leading-[1.3]"}>Jak tento web vznikl?</h1>
               <div className={"flex flex-col items-center justify-center gap-20 w-full font-bold z-10 text-gray-600 leading-[1.4] mt-20"}>
                   <p className="text-lg md:text-xl max-w-5xl text-center">
-                      Jmenuju se Lukáš a jsem reprezentant v plavání. Většinu času trávím v bazénu, kde se snažím posouvat svoje limity,
-                      zlepšovat časy a reprezentovat na závodech. Tréninky jsou dlouhé a náročné – často několik hodin denně,
-                      stovky odplavaných bazénů a nekonečné série. K tomu ale patří jedna věc, která nikdy nekončí: hlad.
-
-                      Po tréninku mizí jídlo skoro stejně rychle jako voda za startovním blokem. A protože plavání není zrovna
-                      nejlevnější sport a energie je potřeba pořád doplňovat, vznikl tenhle malý nápad. Pokud chceš podpořit
-                      reprezentanta na jeho cestě za lepšími výsledky a zároveň pomoct doplnit energii po náročném tréninku,
-                      můžeš symbolicky přispět třeba na bagetu.
-
-                      Každá bageta = víc energie na další kilometry v bazénu.
+                      -//-
                   </p>
 
                   <div className={"flex flex-col items-center justify-center gap-3 w-full font-bold z-10"}>
                       <img src={"/LukasVeselyFoto.jpg"} width={"800"} className={"rounded-3xl shadow-md"} alt={"Lukas"}/>
                       <p className={"text-gray-400"} >Lukáš Veselý</p>
                   </div>
-
-
               </div>
         </section>
-
-          <section>
-
-          </section>
       </main>
 
 
