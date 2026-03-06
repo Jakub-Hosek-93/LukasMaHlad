@@ -1,5 +1,4 @@
 'use client';
-import Image from "next/image";
 import Link from "next/link";
 import BlurText from "./components/BlurText";
 import AnimatedContent from './components/AnimatedContent'
@@ -11,15 +10,26 @@ const handleAnimationComplete = () => {
 
 export default function Home() {
   return (
-      <main className="relative min-h-screen font-[inter]">
-        <section className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center bg-gradient-to-b from-[#064e3b]/40 via-[#78350f]/30 to-black overflow-hidden">
+      <main className="relative min-h-screen font-[inter] bg-white">
+
+        <nav className={"bg-amber-300 fixed max-w-full z-20 h-20 shadow-md container mx-auto flex items-center justify-between py-4 px-6"}>
+            <div className={"text-2xl font-black text-[#563119]"}>LUKÁŠ MÁ HLAD</div>
+            <div className={"space-x-6 font-black text-[#563119]"}>
+              <Link href="#" className={"hover:text-white transition-colors duration-300"}>DOMŮ</Link>
+              <Link href="#" className={"hover:text-white transition-colors duration-300"}>O NÁS</Link>
+              <Link href="#" className={"hover:text-white transition-colors duration-300"}>PŘISPĚT</Link>
+              <Link href="#" className={"hover:text-white transition-colors duration-300"}>KONTAKT</Link>
+            </div>
+        </nav>
+
+        <section className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center bg-white overflow-hidden">
           <BlurText
               text="NENECHTE LUKÁŠE TRPĚT HLADEM!"
               delay={180}
               animateBy="words"
               direction="bottom"
               onAnimationComplete={handleAnimationComplete}
-              className="text-5xl md:text-7xl lg:text-7xl font-black text-white leading-[1.3]"
+              className="text-5xl md:text-7xl lg:text-7xl font-black text-[#563119] leading-[1.3]"
           />
 
           <BlurText
@@ -28,7 +38,7 @@ export default function Home() {
               animateBy="words"
               direction="bottom"
               onAnimationComplete={handleAnimationComplete}
-              className="flex mt-5 text-lg md:text-2xl text-amber-50/80 max-w-4xl leading-relaxed justify-center"
+              className="flex mt-5 text-lg md:text-2xl text-black max-w-4xl leading-relaxed justify-center"
           />
 
           <div className="mt-20 flex flex-col sm:flex-row items-center justify-center gap-5 w-full font-bold">
@@ -45,7 +55,7 @@ export default function Home() {
                 delay={1}
             >
               <Link href="#" className="w-full sm:w-auto">
-                <button className="bg-white p-4.5 rounded-md text-[#30261C] text-xl">
+                <button className="bg-amber-300 p-4 rounded-md text-black text-xm">
                   Přispět na bagetu
                 </button>
               </Link>
@@ -64,7 +74,7 @@ export default function Home() {
                 delay={1}
             >
               <Link href="#" className="w-full sm:w-auto">
-                <button className=" p-4.5 rounded-md text-white text-xl">
+                <button className=" p-4 rounded-md text-black text-xm">
                   Zjistit více
                 </button>
               </Link>
