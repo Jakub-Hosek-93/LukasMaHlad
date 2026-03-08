@@ -16,14 +16,14 @@ export default function Home() {
         <nav className={"bg-amber-300 fixed max-w-full z-20 h-20 shadow-md container mx-auto flex items-center justify-between py-4 px-6"}>
             <div><Link href={"#"}><img src={"/logo.png"} width={"180"} alt={"logo"} /></Link></div>
             <div className={"space-x-6 font-black text-[#563119]"}>
-              <Link href="#" className={"hover:text-white transition-colors duration-300"}>DOMŮ</Link>
+              <Link href="#hero" className={"hover:text-white transition-colors duration-300"}>DOMŮ</Link>
               <Link href="#about" className={"hover:text-white transition-colors duration-300"}>O NÁS</Link>
-              <Link href="#" className={"hover:text-white transition-colors duration-300"}>PŘISPĚT</Link>
+              <Link href="#payment" className={"hover:text-white transition-colors duration-300"}>PŘISPĚT</Link>
               <Link href="#" className={"hover:text-white transition-colors duration-300"}>KONTAKT</Link>
             </div>
         </nav>
 
-        <section className="z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center bg-white overflow-hidden">
+        <section className="z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center bg-white overflow-hidden" id={"hero"}>
           <BlurText
               text="NENECHTE LUKÁŠE TRPĚT HLADEM!"
               delay={180}
@@ -74,21 +74,27 @@ export default function Home() {
                 </AnimatedContent>
 
             </div>
-        </section>
+        </section >
 
         <section className={"min-h-screen font-[inter] items-center rounded-lg bg-white pt-20"} id={"about"}>
           <h1 className={"flex text-5xl md:text-7xl lg:text-7xl justify-center items-center font-black text-black leading-[1.3]"}>Jak tento web vznikl?</h1>
               <div className={"flex flex-col items-center justify-center gap-20 w-full font-bold z-10 text-gray-600 leading-[1.4] mt-20"}>
                   <p className="text-lg md:text-xl max-w-5xl text-center">
-                      -//-
+                      Mám kamaráda Lukáše, který je plavec. Je mu 17 let a týpek má realně furt hlad. Kdo ho zná, tak ví, že jeho nejoblíbenější disciplína není motýlek, ale sprint do 100leté pro bagetu hned jak může.
+
+                      Tuhle stránku jsem udělal víceméně ze srandy, aby mu lidi mohli hodit pár korun právě na bagetu s kuřecími řízečky, protože ten kluk prostě prožere i vlastní peněženku.
                   </p>
 
                   <div className={"flex flex-col items-center justify-center gap-3 w-full font-bold z-10"}>
                       <img src={"/LukasVeselyFoto.jpg"} width={"800"} className={"rounded-3xl shadow-md"} alt={"Lukas"}/>
-                      <p className={"text-gray-400"} >Lukáš Veselý</p>
+                      <p className={"text-gray-400"} >Lukáš</p>
                   </div>
               </div>
         </section>
+
+          <section className={"min-h-screen font-[inter] items-center rounded-lg bg-white pt-20"} id={"payment"}>
+                <h1 className={"flex text-5xl md:text-7xl lg:text-7xl justify-center items-center font-black text-black leading-[1.3]"}>Jak přispět?</h1>
+          </section>
       </main>
 
 
