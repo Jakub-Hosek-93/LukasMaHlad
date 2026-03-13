@@ -13,7 +13,7 @@ export default function Home() {
   return (
       <main className="min-h-screen font-[inter] bg-white">
 
-          <nav className={"bg-amber-300 fixed max-w-full z-20 h-20 shadow-md container mx-auto flex justify-center items-center sm:justify-between py-4 px-6 "}>
+          <nav className={"bg-amber-300 fixed max-w-full z-1000 h-20 shadow-md container mx-auto flex justify-center items-center sm:justify-between px-15"}>
               <div><Link href={"#"}><img src={"/logo.png"} width={"180"} alt={"logo"}/></Link></div>
               <div className={" space-x-6 font-black text-[#563119] hidden sm:flex"}>
                   <Link href="#hero" className={"hover:text-white transition-colors duration-300"}>DOMŮ</Link>
@@ -30,7 +30,7 @@ export default function Home() {
                   animateBy="words"
                   direction="bottom"
                   onAnimationComplete={handleAnimationComplete}
-                  className="text-3xl md:text-7xl lg:text-7xl font-black text-[#563119] leading-[1.3] z-10 justify-center"
+                  className="text-3xl md:text-7xl lg:text-7xl font-black text-[#563119] leading-[1.3] z-100 justify-center"
               />
 
               <BlurText
@@ -71,11 +71,15 @@ export default function Home() {
                       delay={1}
                   >
                       <Link href="#about"
-                            className="text-[#563119] font-bold text-xl px-6 py-4 rounded-lg hover:bg-amber-300 hover:text-[#563119] transition duration-300">
+                            className="text-[#563119] font-bold text-xl px-6 py-4 rounded-lg hover:bg-amber-300 hover:text-[#563119] hover:shadow-md transition duration-300">
                           Zjistit více
                       </Link>
                   </AnimatedContent>
               </div>
+
+              <div className={"absolute bg-amber-300/40 blur-3xl w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] rounded-br-[100%] left-0 top-20 z-0"}></div>
+
+              <div className={"absolute bg-amber-300/40 blur-3xl w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] right-0 rounded-tl-[100%] bottom-0 z-0"}></div>
           </section>
 
           {/*About Section DONE*/}
@@ -97,7 +101,7 @@ export default function Home() {
               <div className={"flex flex-col justify-center items-center w-full font-bold z-10 mt-40 text-black"}>
                   <p className={"text-2xl text-center"}>Kolik ještě chybí do další bagety s řízkem?</p>
                   <div className={"flex flex-col justify-start w-9/12 font-bold"}>
-                      <p className={"text-gray-500 mt-5 justify-start flex"}>20Kč / 80Kč</p>
+                      <p className={"text-gray-500 mt-5 justify-start flex"}>20Kč / 89Kč</p>
                   </div>
                   <ProgressBar></ProgressBar>
               </div>
