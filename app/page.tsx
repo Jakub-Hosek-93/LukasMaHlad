@@ -2,7 +2,6 @@
 import Link from "next/link";
 import BlurText from "./components/BlurText";
 import AnimatedContent from './components/AnimatedContent'
-import { Icon } from '@iconify/react';
 import ProgressBar from "@/app/components/ProgressBar";
 
 const handleAnimationComplete = () => {
@@ -20,7 +19,6 @@ export default function Home() {
                   <Link href="#hero" className={"hover:text-white transition-colors duration-300"}>DOMŮ</Link>
                   <Link href="#about" className={"hover:text-white transition-colors duration-300"}>O NÁS</Link>
                   <Link href="#payment" className={"hover:text-white transition-colors duration-300"}>PŘISPĚT</Link>
-                  <Link href="#" className={"hover:text-white transition-colors duration-300"}>KONTAKT</Link>
               </div>
           </nav>
 
