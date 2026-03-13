@@ -3,7 +3,7 @@ import Link from "next/link";
 import BlurText from "./components/BlurText";
 import AnimatedContent from './components/AnimatedContent'
 import ProgressBar from "@/app/components/ProgressBar";
-import {Icon} from "@iconify/react";
+import { Icon } from "@iconify/react";
 
 const handleAnimationComplete = () => {
     console.log('Animation completed!');
