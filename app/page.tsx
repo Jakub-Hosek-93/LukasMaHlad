@@ -54,7 +54,7 @@ export default function Home() {
                       threshold={0.1}
                       delay={1}
                   >
-                      <Link href="#"
+                      <Link href="#payment"
                             className="bg-amber-300 text-[#563119] font-bold text-xl px-6 py-4 rounded-lg hover:bg-[#563119] hover:text-white transition duration-300 shadow-md">
                           Přispět na bagetu
                       </Link>
