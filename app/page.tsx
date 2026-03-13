@@ -3,6 +3,7 @@ import Link from "next/link";
 import BlurText from "./components/BlurText";
 import AnimatedContent from './components/AnimatedContent'
 import ProgressBar from "@/app/components/ProgressBar";
+import { Icon } from "@iconify/react";
 
 const handleAnimationComplete = () => {
   console.log('Animation completed!');
@@ -77,6 +78,22 @@ export default function Home() {
                   </AnimatedContent>
               </div>
 
+              <div className={"absolute justify-center sm:justify-end bottom-10 flex gap-5 mt-16 z-10 w-10/11"}>
+                  <Link href={"https://www.instagram.com/jakub._.hosek?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="}
+                        target={"_blank"}
+                        className={"text-gray-600 hover:text-black transition-colors duration-300"}
+                  >
+                      <Icon icon="line-md:instagram" width="60" height="60" />
+                  </Link>
+
+                  <Link href={"https://www.instagram.com/_lukas__vesely_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="}
+                        target={"_blank"}
+                        className={"text-gray-600 hover:text-black  transition-colors duration-300"}
+                  >
+                      <Icon icon="line-md:instagram" width="60" height="60" />
+                  </Link>
+              </div>
+
               <div className={"absolute bg-amber-300/40 blur-3xl w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] rounded-br-[100%] left-0 top-20 z-0"}></div>
 
               <div className={"absolute bg-amber-300/40 blur-3xl w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] right-0 rounded-tl-[100%] bottom-0 z-0"}></div>
@@ -115,7 +132,7 @@ export default function Home() {
                   <p className={"flex justify-center text-gray-600 mt-20 font-bold text-xl text-center"}>
                       Stačí pouze naskenovat v aplikaci vaší banky QR code a vybrat jakou částku chcete Lukášovi přispět
                   </p>
-                  <img src={"/QRCode.jpg"} alt={"qr code"} className={"w-80 h-auto mt-10 justify-center "}/>
+                  <img src={"/QRCode.jpg"} alt={"qr code"} className={"w-50 sm:w-70 h-auto mt-10 justify-center "}/>
               </div>
           </section>
 
