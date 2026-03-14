@@ -143,7 +143,7 @@ export default function Home() {
                             Stáhnout QR code
                         </Link>
                         <Link href={"https://veil-occupation-652.notion.site/N-vod-Jak-zaplatit-pomoc-QR-k-du-3232e681ad7880f4a8a3f76c6d03fb9d?source=copy_link"} target={"_blank"}>
-                            <p className={"flex justify-center text-gray-600 mt-5 font-bold text-xl text-center"}>Potřebujete pomoct? Klikněte zde.</p>
+                            <p className={"flex justify-center text-gray-600 mt-5 mb-5 font-bold text-xl text-center hover:underline"}>Potřebujete pomoct? Klikněte zde.</p>
                         </Link>
                     </div>
                 </div>
