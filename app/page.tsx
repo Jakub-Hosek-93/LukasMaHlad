@@ -14,8 +14,7 @@ export default function Home() {
     return (
         <main className="min-h-screen font-[inter] bg-white">
 
-            <nav
-                className={"bg-amber-300 fixed max-w-full z-1000 h-20 shadow-md container mx-auto flex justify-center items-center sm:justify-between px-15"}>
+            <nav className={"bg-amber-300 fixed max-w-full z-1000 h-20 shadow-md container mx-auto flex justify-center items-center sm:justify-between px-15"}>
                 <div><Link href={"#"}><img src={"/logo.png"} width={"180"} alt={"logo"}/></Link></div>
                 <div className={" space-x-6 font-black text-[#563119] hidden sm:flex"}>
                     <Link href="#hero" className={"hover:text-white transition-colors duration-300"}>DOMŮ</Link>
@@ -25,9 +24,7 @@ export default function Home() {
             </nav>
 
             {/*Hero DONE*/}
-            <section
-                className="z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center bg-white overflow-hidden mr-0 ml-0 sm:mr-10 sm:ml-10"
-                id={"hero"}>
+            <section className="z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center bg-white overflow-hidden mr-0 ml-0 sm:mr-10 sm:ml-10" id={"hero"}>
                 <BlurText
                     text="NENECHTE LUKÁŠE TRPĚT HLADEM!"
                     delay={180}
@@ -46,8 +43,7 @@ export default function Home() {
                     className="flex mt-5 md:text-xl text-gray-600 font-bold max-w-4xl leading-relaxed justify-center z-10"
                 />
 
-                <div
-                    className="mt-20 flex flex-col sm:flex-row items-center justify-center gap-10 sm:gap-5 h-auto font-bold z-10">
+                <div className="mt-20 flex flex-col sm:flex-row items-center justify-center gap-10 sm:gap-5 h-auto font-bold z-10">
                     <AnimatedContent
                         distance={100}
                         direction="vertical"
@@ -58,8 +54,7 @@ export default function Home() {
                         threshold={0.1}
                         delay={1}
                     >
-                        <Link href="#payment"
-                              className="bg-amber-300 text-[#563119] font-bold text-xl px-6 py-4 rounded-lg hover:bg-[#563119] hover:text-white transition duration-300 shadow-md">
+                        <Link href="#payment" className="bg-amber-300 text-[#563119] font-bold text-xl px-6 py-4 rounded-lg hover:bg-[#563119] hover:text-white transition duration-300 shadow-md">
                             Přispět na bagetu
                         </Link>
                     </AnimatedContent>
@@ -74,8 +69,7 @@ export default function Home() {
                         threshold={0.1}
                         delay={1}
                     >
-                        <Link href="#about"
-                              className="text-[#563119] font-bold text-xl px-6 py-4 rounded-lg hover:bg-amber-300 hover:text-[#563119] hover:shadow-md transition duration-300">
+                        <Link href="#about" className="text-[#563119] font-bold text-xl px-6 py-4 rounded-lg hover:bg-amber-300 hover:text-[#563119] hover:shadow-md transition duration-300">
                             Zjistit více
                         </Link>
                     </AnimatedContent>
@@ -85,7 +79,7 @@ export default function Home() {
                     <Link
                         href={"https://www.instagram.com/jakub._.hosek?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="}
                         target={"_blank"}
-                        className={"text-gray-600 hover:text-black transition-colors duration-300"}
+                        className={"text-[#563119] hover:text-black transition-colors duration-300"}
                     >
                         <Icon icon="line-md:instagram" width="60" height="60"/>
                     </Link>
@@ -93,17 +87,15 @@ export default function Home() {
                     <Link
                         href={"https://www.instagram.com/_lukas__vesely_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="}
                         target={"_blank"}
-                        className={"text-gray-600 hover:text-black  transition-colors duration-300"}
+                        className={"text-[#563119] hover:text-black  transition-colors duration-300"}
                     >
                         <Icon icon="line-md:instagram" width="60" height="60"/>
                     </Link>
                 </div>
 
-                <div
-                    className={"absolute bg-amber-300/40 blur-3xl w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] rounded-br-[100%] left-0 top-20 z-0"}></div>
+                <div className={"absolute bg-amber-200/30 blur-3xl w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] rounded-br-[100%] left-0 top-10 z-0"}></div>
 
-                <div
-                    className={"absolute bg-amber-300/40 blur-3xl w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] right-0 rounded-tl-[100%] bottom-0 z-0"}></div>
+                <div className={"absolute bg-amber-200/30 blur-3xl w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] right-0 rounded-bl-[100%] top-10 z-0"}></div>
             </section>
 
             {/*About Section DONE*/}
@@ -141,10 +133,19 @@ export default function Home() {
                     přispět?</h1>
                 <div className={"flex flex-col items-center"}>
                     <p className={"flex justify-center text-gray-600 mt-20 font-bold text-xl text-center"}>
-                        Stačí pouze naskenovat v aplikaci vaší banky QR code a vybrat jakou částku chcete Lukášovi
+                        Stačí pouze naskenovat v aplikaci vaší banky QR kód a vybrat jakou částku chcete Lukášovi
                         přispět
                     </p>
                     <img src={"/QRCode.jpg"} alt={"qr code"} className={"w-50 sm:w-70 h-auto mt-10 justify-center "}/>
+
+                    <div className={"flex flex-col items-center"}>
+                        <Link href={"/QRCode.jpg"} download={"LukasQRCode.jpg"} className={"bg-amber-300 text-[#563119] font-bold text-xl px-6 py-4 rounded-lg hover:bg-[#563119] hover:text-white transition duration-300 shadow-md mt-5"}>
+                            Stáhnout QR code
+                        </Link>
+                        <Link href={"https://veil-occupation-652.notion.site/N-vod-Jak-zaplatit-pomoc-QR-k-du-3232e681ad7880f4a8a3f76c6d03fb9d?source=copy_link"} target={"_blank"}>
+                            <p className={"flex justify-center text-gray-600 mt-5 font-bold text-xl text-center"}>Potřebujete pomoct? Klikněte zde.</p>
+                        </Link>
+                    </div>
                 </div>
             </section>
 
