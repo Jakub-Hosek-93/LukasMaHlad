@@ -2,11 +2,12 @@
 
 const ProgressBar = () => {
   return (
-      <progress
-          value={20}
-          max={89}
-          className={"w-9/12 h-4 rounded-2xl overflow-hidden"}
-      ></progress>
+      <div className="w-9/12 h-4 bg-gray-800/50 rounded-full overflow-hidden shadow-inner">
+          <div
+              className="h-full rounded-full bg-gradient-to-r from-cyan-600 to-blue-600 shadow-md"
+              style={{ width: '25%' }}
+          ></div>
+      </div>
     );
 };
 
