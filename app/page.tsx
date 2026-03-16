@@ -92,10 +92,6 @@ export default function Home() {
                         <Icon icon="line-md:instagram" width="60" height="60"/>
                     </Link>
                 </div>
-
-                <div className={"absolute bg-amber-200/30 blur-3xl w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] rounded-br-[100%] left-0 top-10 z-0"}></div>
-
-                <div className={"absolute bg-amber-200/30 blur-3xl w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] right-0 rounded-bl-[100%] top-10 z-0"}></div>
             </section>
 
             {/*About Section DONE*/}
