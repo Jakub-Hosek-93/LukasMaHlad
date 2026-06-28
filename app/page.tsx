@@ -14,36 +14,43 @@ export default function Home() {
     return (
         <main className="min-h-screen font-[inter] bg-white">
 
-            <nav className={"bg-amber-300 fixed max-w-full z-1000 h-20 shadow-md container mx-auto flex justify-center items-center sm:justify-between px-15"}>
-                <div><Link href={"#"}><img src={"/logo.png"} width={"180"} alt={"logo"}/></Link></div>
-                <div className={" space-x-6 font-black text-[#563119] hidden sm:flex"}>
-                    <Link href="#hero" className={"hover:text-white transition-colors duration-300"}>DOMŮ</Link>
-                    <Link href="#about" className={"hover:text-white transition-colors duration-300"}>O NÁS</Link>
-                    <Link href="#payment" className={"hover:text-white transition-colors duration-300"}>PŘISPĚT</Link>
+            <nav className={"bg-white fixed max-w-full z-1000 h-16 shadow-md container mx-auto flex justify-center items-center sm:justify-between px-15"}>
+                <div><Link href={"#"}><img src={"/logo.png"} width={"130"} alt={"logo"}/></Link></div>
+                <div className={"space-x-6 font-bold text-stone-700 hidden sm:flex text-sm"}>
+                    <Link href="#hero" className={"hover:text-black transition-colors duration-300"}>Bageta</Link>
+                    <Link href="#about" className={"hover:text-black transition-colors duration-300"}>Příběh</Link>
+                    <Link href="#payment" className={"hover:text-black transition-colors duration-300"}>Staty</Link>
+                    <Link href="#payment" className={"hover:text-black transition-colors duration-300"}>Přispět</Link>
+
+                </div>
+                <div>
+                    <Link href={"#"} className={"text-white text-sm hidden sm:flex transition-colors duration-300 bg-black py-2 px-6 rounded-3xl hover:bg-stone-800"}>Nakrmit Lukáše</Link>
                 </div>
             </nav>
 
             {/*Hero DONE*/}
-            <section className="z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center bg-white overflow-hidden mr-0 ml-0 sm:mr-10 sm:ml-10" id={"hero"}>
+            <section className="z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center bg-black overflow-hidden mr-0 ml-0" id={"hero"}>
+                <h1 className={"font-medium text-xl text-amber-600"}>Nové. Naléhavé. Hladové.</h1>
+
                 <BlurText
-                    text="NENECHTE LUKÁŠE TRPĚT HLADEM!"
+                    text="Lukáš má hlad."
                     delay={180}
                     animateBy="words"
                     direction="bottom"
                     onAnimationComplete={handleAnimationComplete}
-                    className="text-3xl md:text-7xl lg:text-7xl font-black text-[#563119] leading-[1.3] z-100 justify-center"
+                    className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.3] z-100 justify-center"
                 />
 
                 <BlurText
-                    text="Každá bageta se počítá. Podpořte Lukáše v jeho nekončícím boji s prázdným žaludkem a pomozte mu získat jídlo ještě dnes!"
+                    text={"A tentokrát je to vážné."}
                     delay={50}
                     animateBy="words"
                     direction="bottom"
                     onAnimationComplete={handleAnimationComplete}
-                    className="flex mt-5 md:text-xl text-gray-600 font-bold max-w-4xl leading-relaxed justify-center z-10"
+                    className="flex md:text-3xl text-2xl text-gray-300 font-medium max-w-4xl leading-relaxed justify-center z-10"
                 />
 
-                <div className="mt-20 flex flex-col sm:flex-row items-center justify-center gap-10 sm:gap-5 h-auto font-bold z-10">
+                <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-10 sm:gap-5 h-auto font-bold z-10">
                     <AnimatedContent
                         distance={100}
                         direction="vertical"
@@ -54,7 +61,7 @@ export default function Home() {
                         threshold={0.1}
                         delay={1}
                     >
-                        <Link href="#payment" className="bg-amber-300 text-[#563119] font-bold text-xl px-6 py-4 rounded-lg hover:bg-[#563119] hover:text-white transition duration-300 shadow-md">
+                        <Link href="#payment" className="inline-block bg-amber-600 text-black font-bold text-xl px-6 py-4 rounded-3xl transition duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 ease-in-out">
                             Přispět na bagetu
                         </Link>
                     </AnimatedContent>
@@ -69,7 +76,7 @@ export default function Home() {
                         threshold={0.1}
                         delay={1}
                     >
-                        <Link href="#about" className="text-[#563119] font-bold text-xl px-6 py-4 rounded-lg hover:bg-amber-300 hover:text-[#563119] hover:shadow-md transition duration-300">
+                        <Link href="#about" className="text-amber-600 font-bold text-xl px-6 py-4 rounded-lg hover:underline">
                             Zjistit více
                         </Link>
                     </AnimatedContent>
@@ -79,7 +86,7 @@ export default function Home() {
                     <Link
                         href={"https://www.instagram.com/jakub._.hosek?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="}
                         target={"_blank"}
-                        className={"text-[#563119] hover:text-black transition-colors duration-300"}
+                        className={"text-amber-600 hover:text-white transition-colors duration-300"}
                     >
                         <Icon icon="line-md:instagram" width="60" height="60"/>
                     </Link>
@@ -87,7 +94,7 @@ export default function Home() {
                     <Link
                         href={"https://www.instagram.com/_lukas__vesely_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="}
                         target={"_blank"}
-                        className={"text-[#563119] hover:text-black  transition-colors duration-300"}
+                        className={"text-amber-600 hover:text-white transition-colors duration-300"}
                     >
                         <Icon icon="line-md:instagram" width="60" height="60"/>
                     </Link>

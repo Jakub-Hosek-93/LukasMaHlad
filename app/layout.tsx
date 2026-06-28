@@ -10,9 +10,9 @@ const InterFont = Inter({
 
 export const metadata: Metadata = {
     title: "Lukáš má hlad",
+    authors: [{ name: "Jakub Hošek" }],
     description: "Webová stránka pro Lukáše V., který je plavec a má neustále hlad. Přispějte mu na bagetu s kuřecími řízečky.",
     keywords: "Lukáš Veselý, bageta, hlad, charita, plavec, přispět, kuřecí řízečky, webová stránka, PKHK, sportovec, jídlo, peníze, pomoc, podpora, crowdfunding",
-    creator: 'Jakub Hošek',
 };
 
 export default function RootLayout({
