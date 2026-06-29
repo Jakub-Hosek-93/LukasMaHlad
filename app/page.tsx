@@ -222,10 +222,10 @@ export default function Home() {
                         </div>
 
                         <div className="flex flex-wrap gap-4 mt-12 w-full">
-                            <Link href={"#"} className="bg-amber-600 text-black px-6 py-3 rounded-full font-semibold transition">
+                            <Link href={"/QRCode.jpg"} download={"QRCode.jpg"} className="bg-amber-600 text-black px-6 py-3 rounded-full font-semibold transition">
                                 Stáhnout QR kód
                             </Link>
-                            <Link href={"#"} className="border border-white text-white px-6 py-3 rounded-full font-medium hover:bg-stone-800 transition">
+                            <Link href={"https://veil-occupation-652.notion.site/N-vod-Jak-zaplatit-pomoc-QR-k-du-3232e681ad7880f4a8a3f76c6d03fb9d?pvs=74"} target={"_blank"} className="border border-white text-white px-6 py-3 rounded-full font-medium hover:bg-stone-800 transition">
                                 Potřebuju návod
                             </Link>
                         </div>
