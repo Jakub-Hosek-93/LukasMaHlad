@@ -2,9 +2,9 @@
 
 const ProgressBar = () => {
   return (
-      <div className="w-9/12 h-4 bg-gray-800/50 rounded-full overflow-hidden shadow-inner">
+      <div className="w-full h-2 bg-gray-200/50 rounded-full overflow-hidden shadow-inner">
           <div
-              className="h-full rounded-full bg-gradient-to-r from-cyan-600 to-blue-600 shadow-md"
+              className="h-full rounded-full shadow-md border bg-black"
               style={{ width: '25%' }}
           ></div>
       </div>

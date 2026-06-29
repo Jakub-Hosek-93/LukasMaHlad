@@ -5,9 +5,6 @@ import AnimatedContent from './components/AnimatedContent'
 import ProgressBar from "@/app/components/ProgressBar";
 import { Icon } from "@iconify/react";
 
-const handleAnimationComplete = () => {
-    console.log('Animation completed!');
-};
 
 
 export default function Home() {
@@ -17,27 +14,26 @@ export default function Home() {
             <nav className={"bg-white fixed max-w-full z-1000 h-16 shadow-md container mx-auto flex justify-center items-center sm:justify-between px-15"}>
                 <div><Link href={"#"}><img src={"/logo.png"} width={"130"} alt={"logo"}/></Link></div>
                 <div className={"space-x-6 font-bold text-stone-700 hidden sm:flex text-sm"}>
-                    <Link href="#hero" className={"hover:text-black transition-colors duration-300"}>Bageta</Link>
-                    <Link href="#about" className={"hover:text-black transition-colors duration-300"}>Příběh</Link>
-                    <Link href="#payment" className={"hover:text-black transition-colors duration-300"}>Staty</Link>
+                    <Link href="#about" className={"hover:text-black transition-colors duration-300"}>Bageta</Link>
+                    <Link href="#story" className={"hover:text-black transition-colors duration-300"}>Příběh</Link>
+                    <Link href="#stats" className={"hover:text-black transition-colors duration-300"}>Staty</Link>
                     <Link href="#payment" className={"hover:text-black transition-colors duration-300"}>Přispět</Link>
 
                 </div>
                 <div>
-                    <Link href={"#"} className={"text-white text-sm hidden sm:flex transition-colors duration-300 bg-black py-2 px-6 rounded-3xl hover:bg-stone-800"}>Nakrmit Lukáše</Link>
+                    <Link href={"#payment"} className={"text-white text-sm hidden sm:flex transition-colors duration-300 bg-black py-2 px-6 rounded-3xl hover:bg-stone-800"}>Nakrmit Lukáše</Link>
                 </div>
             </nav>
 
-            {/*Hero DONE*/}
+            {/*Hero */}
             <section className="z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center bg-black overflow-hidden mr-0 ml-0" id={"hero"}>
-                <h1 className={"font-medium text-xl text-amber-600"}>Nové. Naléhavé. Hladové.</h1>
+                <h2 className={"font-medium text-lg text-amber-600"}>Nové. Naléhavé. Hladové.</h2>
 
                 <BlurText
                     text="Lukáš má hlad."
                     delay={180}
                     animateBy="words"
                     direction="bottom"
-                    onAnimationComplete={handleAnimationComplete}
                     className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.3] z-100 justify-center"
                 />
 
@@ -46,7 +42,6 @@ export default function Home() {
                     delay={50}
                     animateBy="words"
                     direction="bottom"
-                    onAnimationComplete={handleAnimationComplete}
                     className="flex md:text-3xl text-2xl text-gray-300 font-medium max-w-4xl leading-relaxed justify-center z-10"
                 />
 
@@ -84,7 +79,8 @@ export default function Home() {
 
                 <div className={"absolute justify-center sm:justify-end bottom-10 flex gap-5 mt-16 z-10 w-10/11"}>
                     <Link
-                        href={"https://www.instagram.com/jakub._.hosek?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="}
+                        href={"https://www.instagram.com/_lukas__vesely_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="}
+
                         target={"_blank"}
                         className={"text-amber-600 hover:text-white transition-colors duration-300"}
                     >
@@ -92,7 +88,7 @@ export default function Home() {
                     </Link>
 
                     <Link
-                        href={"https://www.instagram.com/_lukas__vesely_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="}
+                        href={"https://www.instagram.com/jakub._.hosek?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="}
                         target={"_blank"}
                         className={"text-amber-600 hover:text-white transition-colors duration-300"}
                     >
@@ -101,66 +97,186 @@ export default function Home() {
                 </div>
             </section>
 
-            {/*About Section DONE*/}
-            <section className={"min-h-screen font-[inter] items-center rounded-lg bg-white pt-20 mr-10 ml-10"}
-                     id={"about"}>
-                <h1 className={"flex text-5xl md:text-7xl text-center lg:text-7xl justify-center items-center font-black text-black leading-[1.3]"}>Jak
-                    tento web vznikl?</h1>
-                <div
-                    className={"flex flex-col items-center justify-center gap-20 w-full font-bold z-10 text-gray-600 leading-[1.5] mt-20"}>
-                    <p className="text-lg md:text-xl max-w-5xl text-center">
-                        Mám kamaráda Lukáše, který je plavec. Je mu 17 let a týpek má realně furt hlad. Kdo ho zná, tak
-                        ví, že jeho nejoblíbenější disciplína není motýlek, ale sprint do 100leté pro bagetu hned jak
-                        může.
-
-                        Tuhle stránku jsem udělal víceméně ze srandy, aby mu lidi mohli hodit pár korun právě na bagetu
-                        s
-                        kuřecími řízečky, protože ten kluk prostě prožere i vlastní peněženku.
-                    </p>
+            {/*About Section */}
+            <section className={"min-h-screen items-center rounded-lg bg-gray-100 pt-30 pr-5 pl-5"} id={"about"}>
+                <div className={"flex flex-col items-center justify-center"}>
+                    <h2 className={"font-medium text-lg text-stone-500 justify-center flex"}>
+                        Bageta s kuřecími řízečky
+                    </h2>
+                    <h1 className={"flex justify-center text-5xl md:text-7xl lg:text-7xl font-bold text-black max-w-4xl text-center mt-5 leading-[1.1]"}>
+                        Jediná věc <br/> mezi Lukášem a klidem.
+                    </h1>
+                    <div className={"flex flex-col items-center justify-center gap-20 w-full font-bold z-10 text-gray-600 leading-[1.5] mt-5"}>
+                        <p className="text-lg md:text-xl max-w-xl text-center font-medium">
+                            Bageta s řízkem, ze <a href="https://www.100leta.cz/bistro" target="_blank" className="text-amber-600 hover:underline">
+                                100leté
+                            </a> představuje ultimátní záchranu pro Lukášův nekonečný hlad. Je to investice 89 Kč, která mu umožní přežit další hodinu programování.
+                        </p>
+                    </div>
                 </div>
 
-                <div className={"flex flex-col justify-center items-center w-full font-bold z-10 mt-40 text-black"}>
-                    <p className={"text-2xl text-center"}>Kolik ještě chybí do další bagety s řízkem?</p>
-                    <div className={"flex flex-col justify-start w-9/12 font-bold"}>
-                        <p className={"text-gray-500 mt-5 justify-start flex"}>20Kč / 89Kč</p>
-                    </div>
-                    <ProgressBar></ProgressBar>
+                <div>
+                    {/*TODO: ADD photo*/}
                 </div>
             </section>
 
-            {/*QR Code Section todo: add download qrcode*/}
-            <section
-                className={"min-h-screen font-[inter] items-center rounded-lg bg-white pt-20 mr-10 ml-10 text-center"}
-                id={"payment"}>
-                <h1 className={"flex text-5xl md:text-7xl lg:text-7xl justify-center items-center font-black text-black leading-[1.3]"}>Jak
-                    přispět?</h1>
-                <div className={"flex flex-col items-center"}>
-                    <p className={"flex justify-center text-gray-600 mt-20 font-bold text-xl text-center"}>
-                        Stačí pouze naskenovat v aplikaci vaší banky QR kód a vybrat jakou částku chcete Lukášovi
-                        přispět
+            {/*Story Section*/}
+            <section className={"items-center rounded-lg bg-white pt-30 mr-5 ml-5 text-center"} id={"story"}>
+                <div className={"flex flex-col items-center justify-center"}>
+                    <h2 className={"font-medium text-lg text-stone-500 justify-center flex"}>
+                        Příběh
+                    </h2>
+                    <h1 className={"flex justify-center text-5xl md:text-6xl lg:text-6xl font-bold text-black max-w-4xl text-center mt-5 leading-[1.1]"}>
+                        Jak to celé vzniklo.
+                    </h1>
+                </div>
+                <div className="flex flex-col text-left text-stone-800 mt-12 text-lg md:text-xl gap-6 max-w-3xl mx-auto">
+                    <p>
+                        Mám kamaráda Lukáše. Je mu 17, je to plavec a - kdo ho zná, ten ví - má reálně furt hlad.
                     </p>
-                    <img src={"/QRCode.jpg"} alt={"qr code"} className={"w-50 sm:w-70 h-auto mt-10 justify-center "}/>
-
-                    <div className={"flex flex-col items-center"}>
-                        <Link href={"/QRCode.jpg"} download={"LukasQRCode.jpg"} className={"bg-amber-300 text-[#563119] font-bold text-xl px-6 py-4 rounded-lg hover:bg-[#563119] hover:text-white transition duration-300 shadow-md mt-5"}>
-                            Stáhnout QR code
-                        </Link>
-                        <Link href={"https://veil-occupation-652.notion.site/N-vod-Jak-zaplatit-pomoc-QR-k-du-3232e681ad7880f4a8a3f76c6d03fb9d?source=copy_link"} target={"_blank"}>
-                            <p className={"flex justify-center text-gray-600 mt-5 mb-5 font-bold text-xl text-center hover:underline"}>Potřebujete pomoct? Klikněte zde.</p>
-                        </Link>
-                    </div>
+                    <p>
+                        Jeho nejoblíbenější disciplína není motýlek, ale sprint do 100leté pro bagetu hned, jak může. Tuhle stránku jsem udělal víceméně ze srandy, aby mu lidi mohli hodit pár korun právě na bagetu s kuřecími řízečky.
+                    </p>
+                    <p>
+                        Protože ten kluk prožere i vlastní peněženku.
+                    </p>
                 </div>
             </section>
 
-            {/*Footer DONE*/}
-            <footer className={"bg-amber-300 w-full  text-white flex flex-col items-center justify-center gap-2 py-6 "}>
-                <p className={"text-[#563119] font-bold text-sm sm:text-[18px]  "}>© 2026 LUKÁŠ MÁ HLAD | Vytvořil <a
-                    href={"https://jakub-hosek.cz"} target={"_blank"} className={"text-gray-500 hover:underline"}>Jakub
-                    Hošek</a></p>
-                <p
-                    className={"text-[#563119] font-bold text-xs sm:text-[15px]"}
-                >
-                    Všechna práva vyhrazena</p>
+            {/* Stats Section */}
+            <section className="flex flex-col items-center rounded-lg bg-black py-30 px-5 text-center mt-50" id="stats">
+                <div className="flex flex-col items-center justify-center w-full">
+                    <h2 className="font-medium text-lg text-amber-600 flex justify-center">
+                        Lukáš v číslech
+                    </h2>
+                    <h1 className="flex justify-center text-5xl md:text-6xl font-bold text-white max-w-4xl text-center mt-5 leading-[1.1]">
+                        Tělo jako stroj.
+                    </h1>
+
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16 w-full text-gray-400 max-w-4xl text-center mt-20">
+                        <div className="flex flex-col items-center">
+                            <h3 className="text-7xl font-bold text-amber-600">4000</h3>
+                            <p className="text-sm mt-2">Kalorií denně</p>
+                        </div>
+
+                        <div className="w-60 h-px md:w-px md:h-24 bg-gray-400"></div>
+
+                        <div className="flex flex-col items-center">
+                            <h3 className="text-7xl font-bold text-amber-600">7x</h3>
+                            <p className="text-sm mt-2">Jídlo denně (minimum)</p>
+                        </div>
+
+                        <div className="w-60 h-px md:w-px md:h-24 bg-gray-400"></div>
+
+                        <div className="flex flex-col items-center">
+                            <h3 className="text-7xl font-bold text-amber-600">67.9</h3>
+                            <p className="text-sm mt-2">sprint do 100leté*</p>
+                        </div>
+                    </div>
+
+                    <p className="text-gray-200 text-sm flex justify-center mt-20 max-w-4xl">
+                        *Čas měřen z učebny 406
+                    </p>
+                </div>
+            </section>
+
+            {/* Payment Section */}
+            <section className="min-h-screen flex flex-col items-center rounded-lg bg-stone-100 pt-32 pb-30 px-5 text-center" id="payment">
+
+                <div className="flex flex-col items-center justify-center w-full">
+                    <h2 className="font-medium text-lg text-stone-500 mb-1">
+                        Stav sbírky
+                    </h2>
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black max-w-4xl text-center leading-[1.1]">
+                        Kolik chybí do <br /> další bagety?
+                    </h1>
+                </div>
+
+                <div className="flex flex-col text-stone-800 mt-20 gap-2 w-full max-w-3xl">
+                    <div className="flex justify-between items-baseline gap-50">
+                        <div className="flex items-baseline gap-2">
+                            <span className="text-xl md:text-4xl font-bold text-black">20 Kč</span>
+                            <span className="text-xs text-stone-500 font-medium">/ 89 Kč</span>
+                        </div>
+                        <div className="text-ms font-semibold text-stone-600">
+                            22 %
+                        </div>
+                    </div>
+
+                    <ProgressBar />
+                </div>
+
+                <div className="flex flex-wrap mt-20 gap-6 justify-center w-full max-w-6xl  px-4">
+                    <div className="flex flex-col items-start justify-start bg-black rounded-3xl p-10 w-full max-w-lg text-white">
+                        <div>
+                            <h2 className="font-medium flex text-sm text-amber-600 ">QR PLATBA</h2>
+                            <p className="flex text-start text-4xl mt-4 font-semibold">Naskenuj a přispěj.</p>
+
+                            <p className="text-start font-light mt-4 w-full text-gray-300 text-lg">
+                                Otevři bankovní aplikaci, naskenuj kód a pošli libovolnou částku. Doporučujeme 89 Kč - full experience.
+                            </p>
+
+                            <div className="flex items-center justify-center mt-8 bg-white p-4 rounded-3xl w-fit">
+                                <img width="220" height="220" src="/QRCode.jpg" alt="QR Kód" className="rounded-xl" />
+                            </div>
+                        </div>
+
+                        <div className="flex flex-wrap gap-4 mt-12 w-full">
+                            <Link href={"#"} className="bg-amber-600 text-black px-6 py-3 rounded-full font-semibold transition">
+                                Stáhnout QR kód
+                            </Link>
+                            <Link href={"#"} className="border border-white text-white px-6 py-3 rounded-full font-medium hover:bg-stone-800 transition">
+                                Potřebuju návod
+                            </Link>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col items-start justify-start bg-white border border-gray-100 shadow-sm rounded-3xl p-10 w-full max-w-lg">
+                        <h2 className="font-medium text-sm text-gray-500 ">JAK NA TO</h2>
+                        <p className="text-4xl mt-4 font-semibold text-black">Tři kroky.</p>
+
+                        <div className="flex flex-col gap-8 mt-12">
+                            <div className="flex gap-5 items-start">
+                                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-black text-white font-medium shrink-0 mt-1">
+                                    1
+                                </div>
+                                <p className="text-gray-800 text-lg text-start">
+                                    Otevři aplikaci své banky a zvol Skenovat QR kód.
+                                </p>
+                            </div>
+
+
+                            <div className="flex gap-5 items-start">
+                                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-black text-white font-medium shrink-0 mt-1">
+                                    2
+                                </div>
+                                <p className="text-gray-800 text-lg text-start">
+                                    Zadej libovolnou částku. Každá koruna se počítá.
+                                </p>
+                            </div>
+
+
+                            <div className="flex gap-5 items-start">
+                                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-black text-white font-medium shrink-0 mt-1">
+                                    3
+                                </div>
+                                <p className="text-gray-800 text-lg text-start">
+                                    Potvrď platbu a sleduj, jak Lukášovi rostou síly.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            {/* Footer */}
+            <footer className={"bg-white w-full text-sm font-medium text-stone-600 flex flex-wrap justify-center gap-52 py-10 px-5 mt-0"}>
+                <p className={""}>© 2026 LUKÁŠ MÁ HLAD. Fun-made projekt pro LV</p>
+
+                <p>Vytvořil: <a href={"https://jakub-hosek.cz"} target={"_blank"} className="text-amber-600 hover:underline">
+                    Jakub Hošek
+                </a></p>
             </footer>
         </main>
     );
