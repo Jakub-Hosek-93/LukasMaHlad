@@ -271,10 +271,10 @@ export default function Home() {
             </section>
 
             {/* Footer */}
-            <footer className={"bg-white w-full text-sm font-medium text-stone-600 flex flex-wrap justify-center gap-52 py-10 px-5 mt-0"}>
-                <p className={""}>© 2026 LUKÁŠ MÁ HLAD. Fun-made projekt pro LV</p>
+            <footer className="w-full bg-white px-5 py-10 text-sm font-medium text-stone-600 flex flex-wrap justify-center gap-6 md:gap-52 mt-0">
+                <p>© 2026 LUKÁŠ MÁ HLAD. Fun-made projekt pro LV</p>
 
-                <p>Vytvořil: <a href={"https://jakub-hosek.cz"} target={"_blank"} className="text-amber-600 hover:underline">
+                <p>Vytvořil: <a href="https://jakub-hosek.cz" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:underline">
                     Jakub Hošek
                 </a></p>
             </footer>
