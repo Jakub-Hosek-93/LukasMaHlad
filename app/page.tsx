@@ -116,7 +116,8 @@ export default function Home() {
                 </div>
 
                 <div>
-                    {/*TODO: ADD photo*/}
+                    <img src={"/bageta.png"} alt={"Bageta s kuřecími řízečky"} width={600} height={400} className={"mx-auto mt-20 rounded-lg shadow-lg"} />
+                    <p className="text-gray-500 text-sm mt-2 flex justify-center pb-10">Ilustrační fotografie bagety ze 100leté</p>
                 </div>
             </section>
 
